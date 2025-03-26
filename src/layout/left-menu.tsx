@@ -19,7 +19,6 @@ interface LeftMenuProps {
     toggleDrawer: () => void;
     drawerWidth: number;
 }
-
 export default function LeftMenu({ drawerOpen, toggleDrawer, drawerWidth }:LeftMenuProps) {
 
     return <Drawer
@@ -58,7 +57,6 @@ export default function LeftMenu({ drawerOpen, toggleDrawer, drawerWidth }:LeftM
                     <HomeIcon/>
                 </ListItemIcon>
                 {/* Show full text only in expanded state */}
-                {/*{drawerOpen && <ListItemText primary="Home"/>}*/}
                 {drawerOpen && <ListItemText primary="Home"/>}
             </ListItemButton>
 

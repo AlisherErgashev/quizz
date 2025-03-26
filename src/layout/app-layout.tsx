@@ -1,20 +1,20 @@
-import { ReactNode, useState } from "react";
+import React, {  ReactNode, useState } from "react";
 import {
     AppBar,
     Toolbar,
     Box,
 } from "@mui/material";
 import Navbar from './navbar.tsx';
-import LeftMenu from './left-menu.tsx';
+import LeftMenu  from './left-menu.tsx';
 
 const drawerWidth = 240;
 
 interface AppLayoutProps {
-    children: ReactNode; // Represents any valid React children element(s)
+    children: ReactNode;
 }
 
-
-export function AppLayout({ children }: AppLayoutProps) {
+// export const AppLayout = ({ children }: AppLayoutProps): JSX.Element => {
+export const AppLayout: React.FC<AppLayoutProps> = ({children}) => {
     const [drawerOpen, setDrawerOpen] = useState(true);
 
     /** Drawer toggle state handler */
